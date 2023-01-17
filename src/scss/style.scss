@@ -1,0 +1,26 @@
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//             Variables
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+@import './base/base';
+
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//             Variables
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+@import './base/variables';
+
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//             Components
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+//----layouts----
+@import './components/layouts/header';
+@import './components/layouts/footer';
+
+//----common----
+@import './components/common/button';
+@import './components/common/cardProject';
+
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//             Pages
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+@import './pages/home'

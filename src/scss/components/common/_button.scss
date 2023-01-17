@@ -1,0 +1,84 @@
+// .button{
+//     clip-path: polygon(10% 0, 100% 0, 100% 58%, 90% 100%, 0 99%, 0 48%);
+//     background: $dark-blue;
+//     color: white;
+//     font-weight: bold;
+//     width: 200px;
+//     height: 45px;
+//     border: none;
+
+// }
+
+.btn {
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    padding: 10px 30px;
+    transition: 0.5s;
+    position: relative;
+    font-size: 17px;
+    background: $dark-purple;
+    border: none;
+    color: #fff;
+    box-shadow: 1px 1px 4px rgba(255, 255, 255, 0.64);
+
+    &:hover {
+        letter-spacing: 0.14em;
+        background: $light-blue;
+        color: $light-blue;
+        box-shadow: 0 0 45px $light-blue;
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        inset: 1.5px;
+        background: $dark-blue;
+    }
+    
+    span {
+        position: relative;
+        z-index: 1;
+    }
+    
+    i {
+        position: absolute;
+        inset: 0;
+        display: block;
+    }
+    
+    i::before, i::after{
+        content: '';
+        position: absolute;
+        border: 2px solid $light-blue;
+        width: 7px;
+        height: 4px;
+        background: $dark-blue;
+        transform: translateX(-50%);
+        transition: 0.5s;
+    }
+
+    i::before{
+        top: -3.5px;
+        left: 80%;
+    }
+    
+    &:hover i::before {
+        width: 20px;
+        left: 20%;
+    }
+    
+    i::after {
+        bottom: -3.5px;
+        left: 20%;
+    }
+    
+    &:hover i::after {
+        width: 20px;
+        left: 80%;
+    }
+
+}
+
+
+
+
