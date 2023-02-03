@@ -28,6 +28,7 @@
     width: min-content;
     height: min-content;
     margin: auto;
+    width: 90%;
 
     &::before,
     &::after {
@@ -55,7 +56,7 @@
 
     .container {
         min-width: 310px;
-        width: 95%;
+        width: 100%;
         max-width: 800px;
         background: linear-gradient(to left, #2755b165, #2755b107);
         clip-path: polygon(0 7%, 4% 0, 16% 0, 20% 4%, 80% 4%, 84% 0, 96% 0, 100% 7%, 100% 93%, 96% 100%, 84% 100%, 80% 96%, 62% 96%, 58% 91%, 47% 91%, 45% 96%, 20% 96%, 16% 100%, 4% 100%, 0 93%);
@@ -166,14 +167,31 @@
     background: linear-gradient(#6847ca44, #6847ca00);
     min-width: 300px;
     width: 90%;
+    max-width: 400px;
     margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     height: 300px;
     text-align: center;
 }
 
+.container-robot:first-of-type{
+    transform: scaleX(-1);
+
+    img{
+        transform: scaleX(-1);
+    }
+}
+
 .skills{
     article{
-        display: grid;
+        display: flex;
+        flex-direction: column;
+
+        &:last-of-type{
+            flex-direction: column-reverse;
+        }
     }
 }
 
@@ -353,6 +371,97 @@
     }
 }
 
+@media screen and (min-width:500px) {
+    .about {
+        position: relative;
+        width: min-content;
+        max-width: 800px;
+        height: min-content;
+        max-height: 350px;
+        margin: auto;
+        width: 90%;
+    
+        &::before {
+            background: $light-blue;
+            height: 101%;
+            width: 100.5%;
+            top: -.5%;
+            left: -.25%;
+            z-index: -3;
+        }
+    
+        &::after {
+            background: $dark-blue;
+            height: 100%;
+            width: 100%;
+            z-index: -2;
+            bottom: 0;
+        }
+    
+        .container {
+            min-width: 310px;
+            width: 100%;
+            height: 360px;
+            max-width: 800px;
+            background: linear-gradient(to left, #2755b165, #2755b107);
+            clip-path: polygon(0 7%, 4% 0, 16% 0, 20% 4%, 80% 4%, 84% 0, 96% 0, 100% 7%, 100% 93%, 96% 100%, 84% 100%, 80% 96%, 62% 96%, 58% 91%, 47% 91%, 45% 96%, 20% 96%, 16% 100%, 4% 100%, 0 93%);
+    
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 10% 5% 24% 10%;
+    
+            h1 {
+                text-align: left;
+                margin: 0 0 20px;
+                width: 100%;
+            }
+        }
+    
+        img {
+            position: absolute;
+            height: 150px;
+            bottom: -30px;
+            left: -20px;
+        }
+    
+        .circle {
+            position: absolute;
+            background: linear-gradient(155deg, #6942caf9, #6942ca3b);
+            height: 120px;
+            width: 120px;
+            border-radius: 50%;
+            bottom: 10px;
+            right: -60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: -1;
+    
+            &::after {
+                content: '';
+                width: 70%;
+                height: 70%;
+                background: $dark-blue;
+                position: absolute;
+                border-radius: 50%;
+            }
+    
+            &::before {
+                content: '';
+                height: 200px;
+                width: 2px;
+                background: $light-blue;
+                position: absolute;
+                bottom: 15px;
+                z-index: 1;
+            }
+        }
+    
+    }
+}
 
 @media screen and (min-width:768px) {
     .banner {
@@ -382,6 +491,7 @@
     .about {
         position: relative;
         width: min-content;
+        width: 90%;
         height: min-content;
         margin: auto;
     
@@ -410,8 +520,8 @@
         }
     
         .container {
-            height: 400px;
-            width: 800px;
+            height: 370px;
+            width: 100%;
             background: linear-gradient(to left, #2755b165, #2755b107);
             clip-path: polygon(0 7%, 4% 0, 16% 0, 20% 4%, 80% 4%, 84% 0, 96% 0, 100% 7%, 100% 93%, 96% 100%, 84% 100%, 80% 96%, 62% 96%, 58% 91%, 47% 91%, 45% 96%, 20% 96%, 16% 100%, 4% 100%, 0 93%);
     
@@ -476,6 +586,10 @@
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         margin: 40px 0;
+        overflow-x: hidden;
+        height: 360px;
+        width: 100%;
+        align-items: flex-end;
     
         article {
             text-align: center;
@@ -485,8 +599,8 @@
             background: #C3E8E9;
             border-radius: 50%;
             border: 5px solid $medium-blue;
-            height: 200px;
-            width: 200px;
+            height: 180px;
+            width: 180px;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -512,7 +626,11 @@
     
     .skills{
         article{
-            display: flex;
+            flex-direction: row;
+
+            &:last-of-type{
+                flex-direction: row;
+            }
         }
     }
     
@@ -644,6 +762,7 @@
             border-radius: 5px;
     
             article:first-of-type{
+                border-bottom: none;
                 border-right: 1px solid $light-blue;           
             }
     

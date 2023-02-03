@@ -9,7 +9,7 @@
         "components/layouts/_header.scss",
         "components/layouts/_footer.scss",
         "components/common/_button.scss",
-        "Components/common/_cardProject.scss",
+        "components/common/_cardProject.scss",
         "pages/_home.scss"
     ],
     "names": [],
